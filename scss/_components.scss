@@ -1,0 +1,28 @@
+.drop-down-info {
+    width: 10em;
+    height:  3.5em;
+    padding: 0 0.5em 0 1.5em;
+    border-radius: 2.125em;
+    color: $color-grey;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: $font-size-smx;
+    line-height: 1.4;
+    letter-spacing: .2rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;   
+}
+
+.arrow-icon {
+    width: 2.5em;
+    height: 2.5em;
+    transform: rotate(180deg);
+    transition: transform 0.5s, filter 0.2s,
+    -webkit-transform 0.5s, -webkit-filter 0.2s;
+}
+
