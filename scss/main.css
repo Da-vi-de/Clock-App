@@ -1,12 +1,14 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: 'Inter', sans-serif;
   color: #ffff;
+  text-transform: uppercase;
 }
 
 .daytime-bg {
@@ -37,7 +39,7 @@ body {
   background: rgba(0, 0, 0, 0.4);
 }
 
-.hero {
+.container {
   margin: 1em 0 0 1.5em;
 }
 
@@ -57,15 +59,47 @@ body {
   margin: 0 1.5em 1em 0;
 }
 
+.greeting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sun-icon {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-right: 1em;
+}
+
+.info-detail-container {
+  width: 100%;
+  padding: 3em 1.625em;
+  position: absolute;
+  bottom: -1em;
+  background-color: #ffffffbf;
+  color: #303030;
+}
+
+.info-position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .drop-down-info {
   width: 10em;
   height: 3.5em;
+  margin-bottom: 2em;
   padding: 0 0.5em 0 1.5em;
   border-radius: 2.125em;
   color: #8f8c8c;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 0.75em;
+  font-size: 0.75rem;
   line-height: 1.4;
   letter-spacing: .2rem;
   border: none;
@@ -90,11 +124,45 @@ body {
 }
 
 .quote-text {
-  font-size: 0.625em;
+  font-size: 0.625rem;
   line-height: 1.75em;
+  text-transform: capitalize;
 }
 
 .quote-author {
-  font-size: 0.625em;
+  font-size: 0.625rem;
+}
+
+.greeting-text {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+.time {
+  font-size: 6.25rem;
+}
+
+.time span {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.time-zone {
+  margin: 1em 0 3em 0;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.info-text {
+  font-weight: 400;
+  font-size: 0.625rem;
+  line-height: 5em;
+  letter-spacing: 1px;
+}
+
+.info-text-bold {
+  font-size: 1.25rem;
+  text-transform: capitalize;
 }
 /*# sourceMappingURL=main.css.map */

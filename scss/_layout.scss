@@ -1,9 +1,13 @@
-*{box-sizing: border-box;}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    margin: 0;
     font-family: 'Inter', sans-serif;
     color: $color-white;
+    text-transform: uppercase;
 }
 
 .daytime-bg {
@@ -35,7 +39,7 @@ body {
     }
 }
 
-.hero {
+.container {
     margin: 1em 0 0 1.5em;
 }
 
@@ -47,6 +51,29 @@ body {
 .refresh-icon {
     align-self: center;
     margin: 0 1.5em 1em 0;
+}
+
+.greeting {
+    display: flex;
+}
+
+.sun-icon {
+    align-self: center;
+    margin-right: 1em;
+}
+
+.info-detail-container {
+    width: 100%;
+    padding: 3em 1.625em;
+    position: absolute;
+    bottom: -1em;
+    background-color: $color-light-grey;
+    color: $color-black;
+}
+
+.info-position {
+    display: flex;
+    justify-content: space-between;
 }
 
 
