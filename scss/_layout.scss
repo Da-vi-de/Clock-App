@@ -69,6 +69,11 @@ body {
     bottom: -1em;
     background-color: $color-light-grey;
     color: $color-black;
+    transition: all 0.5s ease;
+}
+
+.hide-detail {
+   display: none;
 }
 
 .info-position {

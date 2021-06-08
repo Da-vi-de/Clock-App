@@ -16,7 +16,7 @@
   <div class="background daytime-bg"></div>
 
 <main class="container">
-<!-- <header class="hero">
+ <header class="hero">
   <div class="quote">
     <p class="quote-text">
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -24,11 +24,11 @@
     </p>
     <img src="./assets/desktop/icon-refresh.svg" 
          alt="refresh icon" 
-         class="refresh-icon"
+         class="refresh-icon" 
     >
   </div>
   <h3 class="quote-author">Quote Author</h3>
-</header> -->
+</header>
 
   <!-- Display Time-->
 <div class="display-time">
@@ -45,13 +45,15 @@
   <h2 class="time-zone">in london, uk</h2>
 </div>
 
-  <button class="drop-down-info">
-    More
-    <img src="./assets/desktop/icon-arrow-up.svg" alt="arrow icon" class="arrow-icon">
+  <button id="myButton" class="drop-down-info">
+   <span>More</span>
+    <img src="./assets/desktop/icon-arrow-up.svg" alt="arrow icon" 
+         class="arrow-icon" 
+         id="arrow">
   </button>
 </main>
   <!-- Info Detail -->
-  <div class="info-detail-container">
+  <div class="info-detail-container hide-detail">
 
     <article class="info-position">
         <h3 class="info-text">Current timezone</h3>

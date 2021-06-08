@@ -79,6 +79,12 @@ body {
   bottom: -1em;
   background-color: #ffffffbf;
   color: #303030;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.hide-detail {
+  display: none;
 }
 
 .info-position {
@@ -123,6 +129,11 @@ body {
   transition: transform 0.5s, filter 0.2s, -webkit-transform 0.5s, -webkit-filter 0.2s;
 }
 
+.rotate {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
 .quote-text {
   font-size: 0.625rem;
   line-height: 1.75em;
@@ -162,6 +173,7 @@ body {
 }
 
 .info-text-bold {
+  margin-top: .5em;
   font-size: 1.25rem;
   text-transform: capitalize;
 }
