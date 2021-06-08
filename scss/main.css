@@ -59,6 +59,10 @@ body {
   margin: 0 1.5em 1em 0;
 }
 
+.display-time {
+  margin-top: 2em;
+}
+
 .greeting {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,6 +145,8 @@ body {
 }
 
 .quote-author {
+  margin-top: 1em;
+  margin-bottom: 15em;
   font-size: 0.625rem;
 }
 
