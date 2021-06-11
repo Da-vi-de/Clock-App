@@ -53,6 +53,7 @@ body {
 }
 
 .refresh-icon {
+  cursor: pointer;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -139,15 +140,17 @@ body {
 }
 
 .quote-text {
+  margin-top: 1em;
   font-size: 0.625rem;
-  line-height: 1.75em;
-  text-transform: capitalize;
+  line-height: 1.80em;
+  text-transform: none;
 }
 
 .quote-author {
   margin-top: 1em;
   margin-bottom: 15em;
   font-size: 0.625rem;
+  text-transform: none;
 }
 
 .greeting-text {
