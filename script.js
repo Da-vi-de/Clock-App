@@ -1,24 +1,55 @@
 $(document).ready(function() {
 
-const quote = $('#quote');
-const author = $('#author');
 const refresh = $('#refresh');
 const button = $('#myButton');
-const arrow = $('#arrow');
 
+// Get the location through Geolocation API
+function getLocation() {
+
+   const location = $('#location');
+   
+   $.getJSON("https://freegeoip.app/json/", function(data) {
+      location.text(data.country_name);
+   });
+};
+
+//Get Extra info based on user ip address from an API
+function getTimezoneAndInfo() {
+
+   const timeZone = $('#timeZone');
+   const dayOfYear = $('#yearDay');
+   const dayOfWeek = $('#weekDay');
+   const numberOfWeek = $('#weekNumber');
+
+   $.getJSON("http://worldtimeapi.org/api/ip", function(data) {
+
+      timeZone.text(data.timezone);
+      dayOfYear.text(data.day_of_year);
+      dayOfWeek.text(data.day_of_week);
+      numberOfWeek.text(data.week_number);
+   });
+};
 
 // Get a random quote from an API
 refresh.on('click', function(e) { 
    e.preventDefault();
 
+   const quote = $('#quote');
+   const author = $('#author');
+
    $.getJSON("https://api.quotable.io/random", function(data) {
+
       quote.text(data.content).find('p');
       author.text(data.author);
    });
 });
 
 // Show and Hide extra content
-   function hideDetail() {
+   button.on('click', function(e) {
+      e.preventDefault();
+
+      const arrow = $('#arrow');
+
         if(this) {
             $("div.info-detail-container").toggleClass('hide-detail');
             $("header").toggleClass('hide-detail');
@@ -28,13 +59,15 @@ refresh.on('click', function(e) {
         : button.find('span').text("Less");
 
         arrow.toggleClass('rotate');
-   };
-   button.click(hideDetail);
+   });
 
+   getTimezoneAndInfo();
+   getLocation();
 
 });
 
    /*
-  
+  const time = $('#time');
+  const location = $('#location');
    */
 
