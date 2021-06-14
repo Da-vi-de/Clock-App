@@ -3,6 +3,34 @@ $(document).ready(function() {
 const refresh = $('#refresh');
 const button = $('#myButton');
 
+// Get the time and greeting
+function getTime() {
+
+   let time = new Date();
+   let hours = time.getHours();
+   let minutes = time.getMinutes();
+
+   let greeting = '';
+
+   if(hours >= 5 && hours <= 11) {
+     greeting = 'morning';
+  } else if(hours >= 12 && hours <= 17) {
+     greeting = 'afternoon';
+  } else {
+     greeting = 'evening';
+  };
+  $('#greeting').text(`good ${greeting}`);
+
+   if(minutes < 10) {minutes = '0' + minutes};
+
+   $('#time').text(`${hours}:${minutes}`);
+   
+   //Update time
+	let interval = (60 - (new Date()).getSeconds()) * 1000 + 5;
+   setTimeout(getTime,interval);
+};
+
+
 // Get the location through Geolocation API
 function getLocation() {
 
@@ -61,13 +89,13 @@ refresh.on('click', function(e) {
         arrow.toggleClass('rotate');
    });
 
+   getTime();
    getTimezoneAndInfo();
    getLocation();
 
 });
 
    /*
-  const time = $('#time');
-  const location = $('#location');
+   
    */
 
