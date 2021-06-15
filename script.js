@@ -9,6 +9,8 @@ function getTime() {
    let time = new Date();
    let hours = time.getHours();
    let minutes = time.getMinutes();
+   const icon = $('#icons');
+   const extraInfo = $('#extraInfo');
 
    let greeting = '';
 
@@ -28,6 +30,17 @@ function getTime() {
    //Update time
 	let interval = (60 - (new Date()).getSeconds()) * 1000 + 5;
    setTimeout(getTime,interval);
+
+   //Change background and icon 
+   if(hours >= 5 && hours <= 17) {
+      $('#bg').css("background-image", "url('../assets/mobile/bg-image-daytime.jpg')");
+   } else {
+     $('#bg').css("background-image", "url('../assets/mobile/bg-image-nighttime.jpg')");
+     icon.attr("src", "./assets/desktop/icon-moon.svg");
+     icon.attr("alt", "moon-icon");
+     extraInfo.css("background-color", "#303030");
+     extraInfo.css("color", "#ffff");
+   }; 
 };
 
 
@@ -67,7 +80,7 @@ refresh.on('click', function(e) {
 
    $.getJSON("https://api.quotable.io/random", function(data) {
 
-      quote.text(data.content).find('p');
+      quote.text(`"${data.content}"`).find('p');
       author.text(data.author);
    });
 });

@@ -13,9 +13,10 @@
 </head>
 <body>
 
-  <div class="background daytime-bg"></div>
+ <div class="background" id="bg"></div>
 
 <main class="container">
+  
  <header class="hero">
   <div class="quote">
     <p class="quote-text" id="quote">
@@ -38,7 +39,8 @@
   <div class="greeting">
     <img src="./assets/desktop/icon-sun.svg" 
           alt="sun icon"
-          class="sun-icon"
+          class="icons"
+          id="icons"
     >
     <h2 class="greeting-text" id="greeting"></h2>
   </div>
@@ -55,7 +57,7 @@
   </button>
 </main>
   <!-- Info Detail -->
-  <div class="info-detail-container hide-detail">
+  <div class="info-detail-container hide-detail" id="extraInfo">
 
     <article class="info-position">
         <h3 class="info-text">Current timezone</h3>

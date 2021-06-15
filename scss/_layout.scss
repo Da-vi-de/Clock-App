@@ -10,10 +10,6 @@ body {
     text-transform: uppercase;
 }
 
-.daytime-bg {
-    background-image: url(../assets/mobile/bg-image-daytime.jpg);
-}
-
 .background {
     height: 100%;
     background-repeat: no-repeat;
@@ -62,7 +58,7 @@ body {
     display: flex;
 }
 
-.sun-icon {
+.icons {
     align-self: center;
     margin-right: 1em;
 }
