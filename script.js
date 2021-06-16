@@ -11,37 +11,39 @@ function getTime() {
    let minutes = time.getMinutes();
    const icon = $('#icons');
    const extraInfo = $('#extraInfo');
-
+  
    let greeting = '';
 
    if(hours >= 5 && hours <= 11) {
      greeting = 'morning';
-  } else if(hours >= 12 && hours <= 17) {
+  } else if(hours >= 12 && hours <= 18) {
      greeting = 'afternoon';
   } else {
      greeting = 'evening';
   };
   $('#greeting').text(`good ${greeting}`);
 
+   //Change background and icon
+   if(hours >= 6  && hours <= 18) {
+   $('div.background').toggleClass('day-bg');
+   } else {
+      $('div.background').toggleClass('night-bg');
+      
+      icon.attr("src", "./assets/desktop/icon-moon.svg");
+      icon.attr("alt", "moon icon");
+      extraInfo.css("background-color", "#303030");
+      extraInfo.css("color", "#ffff");
+   };
+
    if(minutes < 10) {minutes = '0' + minutes};
 
    $('#time').text(`${hours}:${minutes}`);
-   
+
    //Update time
 	let interval = (60 - (new Date()).getSeconds()) * 1000 + 5;
    setTimeout(getTime,interval);
-
-   //Change background and icon 
-   if(hours >= 5 && hours <= 17) {
-      $('#bg').css("background-image", "url('../assets/mobile/bg-image-daytime.jpg')");
-   } else {
-     $('#bg').css("background-image", "url('../assets/mobile/bg-image-nighttime.jpg')");
-     icon.attr("src", "./assets/desktop/icon-moon.svg");
-     icon.attr("alt", "moon-icon");
-     extraInfo.css("background-color", "#303030");
-     extraInfo.css("color", "#ffff");
-   }; 
 };
+
 
 
 // Get the location through Geolocation API
@@ -106,9 +108,20 @@ refresh.on('click', function(e) {
    getTimezoneAndInfo();
    getLocation();
 
+   //Update time
+	let interval = (60 - (new Date()).getSeconds()) * 1000 + 5;
+   setTimeout(getTime,interval);
 });
 
-   /*
-   
-   */
 
+/*
+if(hours >= 5 && hours <= 17) {
+      $('#bg').toggleClass('.day-bg');
+   } else {
+     $('#bg').toggleClass('.night-bg');
+     icon.attr("src", "./assets/desktop/icon-moon.svg");
+     icon.attr("alt", "moon icon");
+     extraInfo.css("background-color", "#303030");
+     extraInfo.css("color", "#ffff");
+   };  
+*/

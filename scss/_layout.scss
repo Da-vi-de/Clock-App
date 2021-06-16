@@ -35,6 +35,14 @@ body {
     }
 }
 
+.day-bg {
+    background-image: url('../assets/mobile/bg-image-daytime.jpg');
+}
+
+.night-bg {
+    background-image: url(../assets/mobile/bg-image-nighttime.jpg);
+}
+
 .container {
     margin: 1em 0 0 1.5em;
 }
@@ -80,6 +88,33 @@ body {
 .info-position {
     display: flex;
     justify-content: space-between;
+}
+
+/* =================
+     Tablet Style
+   ================= */
+@media all and (min-width: 31.25em) {
+    .day-bg {
+        background-image: url('../assets/tablet/bg-image-daytime.jpg');
+    }
+    
+    .night-bg {
+        background-image: url('../assets/tablet/bg-image-nighttime.jpg');
+    }
+
+    .container {
+        margin: 2em 0 0 2.5em;
+    }
+
+    .refresh-icon {
+        margin: 0 3.5em 1em 0;
+    }
+
+    .info-detail-container {
+       height: 50%;
+       position: fixed;
+    }
+
 }
 
 

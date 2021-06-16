@@ -46,5 +46,20 @@
    text-transform: capitalize;
 }
 
+/* =================
+     Tablet Style
+   ================= */
+@media all and (min-width: 31.25em) {
+    .quote-text {
+        padding-right: 4em;
+    }
 
+    .info-text {
+        font-size: $font-size-smx;
+    }
+
+    .info-text-bold {
+        font-size: $font-size-l;
+    }
+}
 
