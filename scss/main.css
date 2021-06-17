@@ -127,6 +127,66 @@ body {
   }
 }
 
+/* =================
+     Desktop Style
+   ================= */
+@media all and (min-width: 56.25em) {
+  .day-bg {
+    background-image: url("../assets/desktop/bg-image-daytime.jpg");
+  }
+  .night-bg {
+    background-image: url("../assets/desktop/bg-image-nighttime.jpg");
+  }
+  .container {
+    margin-left: 6em;
+  }
+  .quote {
+    width: 60%;
+  }
+  .refresh-icon {
+    margin-bottom: 1.8em;
+  }
+  .info-position {
+    display: unset;
+    margin-bottom: 2em;
+  }
+  .info-detail-pos-desk {
+    margin: 0 6em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .desktop-pos-one {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .desktop-pos-two {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 6em;
+  }
+}
+
+@media all and (min-width: 96em) {
+  .container {
+    margin-left: 10em;
+  }
+  .info-detail-pos-desk {
+    margin: 0 10em;
+  }
+}
+
 .drop-down-info {
   width: 10em;
   height: 3.5em;
@@ -166,8 +226,18 @@ body {
 }
 
 /* =================
-     Tablet Style
+     Desktop Style
    ================= */
+@media all and (min-width: 56.25em) {
+  .drop-down-info {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-left: auto;
+    margin-right: 2em;
+    margin-bottom: 2em;
+  }
+}
+
 .quote-text {
   margin-top: 1em;
   font-size: 0.625rem;
@@ -227,7 +297,35 @@ body {
     font-size: 0.75rem;
   }
   .info-text-bold {
-    font-size: 2.25rem;
+    font-size: 1.85rem;
+  }
+}
+
+/* =================
+     Desktop Style
+   ================= */
+@media all and (min-width: 56.25em) {
+  .quote-text, .quote-author {
+    font-size: 1rem;
+  }
+  .quote-text {
+    padding-right: 0;
+  }
+  .greeting-text {
+    font-size: 1rem;
+  }
+  .time {
+    font-size: 10rem;
+  }
+  .time-zone {
+    margin: auto;
+    font-size: 1.25rem;
+  }
+  .info-text {
+    line-height: unset;
+  }
+  .info-text-bold {
+    font-size: 2.5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

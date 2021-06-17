@@ -117,4 +117,61 @@ body {
 
 }
 
+/* =================
+     Desktop Style
+   ================= */
+@media all and (min-width: 56.25em) {
+    .day-bg {
+        background-image: url('../assets/desktop/bg-image-daytime.jpg');
+    }
+    
+    .night-bg {
+        background-image: url('../assets/desktop/bg-image-nighttime.jpg');
+    }
+
+    .container {
+        margin-left: 6em;
+    }
+
+    .quote {
+        width: 60%;
+    }
+
+    .refresh-icon {
+        margin-bottom: 1.8em;
+    }
+
+    .info-position {
+        display: unset;
+        margin-bottom: 2em;
+    }
+
+    .info-detail-pos-desk {
+        margin: 0 6em;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+   .desktop-pos-one {
+       display: flex;
+       flex-direction: column;
+   }
+
+   .desktop-pos-two {
+       display: flex;
+       flex-direction: column;
+       margin-left: 6em;
+ }
+}
+
+@media all and (min-width: 96em) {
+    .container {
+        margin-left: 10em;
+    }
+
+    .info-detail-pos-desk {
+        margin: 0 10em;
+    }
+}
+
 

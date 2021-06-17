@@ -21,13 +21,14 @@ function getTime() {
   } else {
      greeting = 'evening';
   };
-  $('#greeting').text(`good ${greeting}`);
+  $('#greeting').text(`good ${greeting}, it's currently`);
 
    //Change background and icon
    if(hours >= 6  && hours <= 18) {
-   $('div.background').toggleClass('day-bg');
+   $('div.background').addClass('day-bg');
    } else {
-      $('div.background').toggleClass('night-bg');
+      $('div.background').removeClass('day-bg');
+      $('div.background').addClass('night-bg');
       
       icon.attr("src", "./assets/desktop/icon-moon.svg");
       icon.attr("alt", "moon icon");
