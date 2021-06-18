@@ -53,7 +53,7 @@ function getLocation() {
    $.getJSON("https://freegeoip.app/json/", function(data) {
       location.text(data.country_name);
    }).fail(function() { 
-      alert( "error" )
+      console.log( "error" )
    });
 };
 
@@ -72,7 +72,7 @@ function getTimezoneAndInfo() {
       dayOfWeek.text(data.day_of_week);
       numberOfWeek.text(data.week_number);
    }).fail(function() { 
-      alert( "error" )
+      console.log( "error" )
    });
 };
 
@@ -88,7 +88,7 @@ refresh.on('click', function(e) {
       quote.text(`"${data.content}"`).find('p');
       author.text(data.author);
    }).fail(function() { 
-      alert( "error" )
+      console.log( "error" )
    });
 });
 
