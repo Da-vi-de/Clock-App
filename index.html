@@ -6,21 +6,87 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="./scss/main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> 
   
   <title>Frontend Mentor | Clock App</title>
 </head>
 <body>
-  , it's currently
 
-  in
+  <div class="background" id="bg"></div>
 
-  More
-  Less
+<main class="container">
+  
+ <header class="hero">
+  <div class="quote">
+    <p class="quote-text" id="quote">
+      "The science of operations, as derived from mathematics
+       more especially, is a science of itself, and has its own
+       abstract truth and value."
+    </p>
+    <img src="./assets/desktop/icon-refresh.svg" 
+         alt="refresh icon" 
+         class="refresh-icon"
+         id="refresh" 
+         tabindex="1"
+    >
+  </div>
+  <h3 class="quote-author" id="author">Ada Lovelace</h3>
+</header>
 
-  Current timezone
-  Day of the year
-  Day of the week
-  Week number
+  <!-- Display Time-->
+<div class="display-time">
+
+  <div class="greeting">
+    <img src="./assets/desktop/icon-sun.svg" 
+          alt="sun icon"
+          class="icons"
+          id="icons"
+    >
+    <h2 class="greeting-text" id="greeting"></h2>
+  </div>
+
+  <h1 class="time" id="time">11:37</h1>
+  <h2 class="time-zone" id="location"></h2>
+</div>
+
+  <button id="myButton" class="drop-down-info">
+   <span>More</span>
+    <img src="./assets/desktop/icon-arrow-up.svg" alt="arrow icon" 
+         class="arrow-icon" 
+         id="arrow">
+  </button>
+</main>
+  <!-- Info Detail -->
+  <div class="info-detail-container hide-detail" id="extraInfo">
+
+  <div class="info-detail-pos-desk">
+
+    <div class="desktop-pos-one">
+    <article class="info-position">
+        <h3 class="info-text">Current timezone</h3>
+        <h3 class="info-text-bold" id="timeZone">europe/london</h3>
+    </article>
+  
+    <article class="info-position">
+      <h3 class="info-text">Day of the year</h3>
+      <h3 class="info-text-bold" id="yearDay">295</h3>
+    </article>
+  </div>
+
+  <div class="desktop-pos-two">
+    <article class="info-position">
+      <h3 class="info-text">Day of the week</h3>
+      <h3 class="info-text-bold" id="weekDay">5</h3>
+    </article>
+
+      <article class="info-position">
+        <h3 class="info-text">Week number</h3>
+        <h3 class="info-text-bold" id="weekNumber">42</h3>
+      </article>
+    </div>
+  </div>
+</div>
 </body>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
           integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 

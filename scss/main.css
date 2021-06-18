@@ -1,1 +1,331 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #ffff;
+  text-transform: uppercase;
+}
+
+.background {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.day-bg {
+  background-image: url("../assets/mobile/bg-image-daytime.jpg");
+}
+
+.night-bg {
+  background-image: url(../assets/mobile/bg-image-nighttime.jpg);
+}
+
+.container {
+  margin: 1em 0 0 1.5em;
+}
+
+.quote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.refresh-icon {
+  cursor: pointer;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0 1.5em 1em 0;
+}
+
+.display-time {
+  margin-top: 2em;
+}
+
+.greeting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.icons {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-right: 1em;
+}
+
+.info-detail-container {
+  width: 100%;
+  padding: 3em 1.625em;
+  position: absolute;
+  bottom: -1em;
+  background-color: #ffffffbf;
+  color: #303030;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.hide-detail {
+  display: none;
+}
+
+.info-position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* =================
+     Tablet Style
+   ================= */
+@media all and (min-width: 31.25em) {
+  .day-bg {
+    background-image: url("../assets/tablet/bg-image-daytime.jpg");
+  }
+  .night-bg {
+    background-image: url("../assets/tablet/bg-image-nighttime.jpg");
+  }
+  .container {
+    margin: 2em 0 0 2.5em;
+  }
+  .refresh-icon {
+    margin: 0 3.5em 1em 0;
+  }
+  .info-detail-container {
+    height: 50%;
+    position: fixed;
+  }
+}
+
+/* =================
+     Desktop Style
+   ================= */
+@media all and (min-width: 56.25em) {
+  .day-bg {
+    background-image: url("../assets/desktop/bg-image-daytime.jpg");
+  }
+  .night-bg {
+    background-image: url("../assets/desktop/bg-image-nighttime.jpg");
+  }
+  .container {
+    margin-left: 6em;
+  }
+  .quote {
+    width: 60%;
+  }
+  .refresh-icon {
+    margin-bottom: 1.8em;
+  }
+  .info-position {
+    display: unset;
+    margin-bottom: 2em;
+  }
+  .info-detail-pos-desk {
+    margin: 0 6em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .desktop-pos-one {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .desktop-pos-two {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 6em;
+  }
+}
+
+@media all and (min-width: 96em) {
+  .container {
+    margin-left: 10em;
+  }
+  .info-detail-pos-desk {
+    margin: 0 10em;
+  }
+}
+
+.drop-down-info {
+  width: 10em;
+  height: 3.5em;
+  margin-bottom: 2em;
+  padding: 0 0.5em 0 1.5em;
+  border-radius: 2.125em;
+  color: #8f8c8c;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: .2rem;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+}
+
+.arrow-icon {
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  transition: transform 0.5s, filter 0.2s, -webkit-transform 0.5s, -webkit-filter 0.2s;
+}
+
+.rotate {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+/* =================
+     Desktop Style
+   ================= */
+@media all and (min-width: 56.25em) {
+  .drop-down-info {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-left: auto;
+    margin-right: 2em;
+    margin-bottom: 2em;
+  }
+}
+
+.quote-text {
+  margin-top: 1em;
+  font-size: 0.625rem;
+  line-height: 1.80em;
+  text-transform: none;
+}
+
+.quote-author {
+  margin-top: 1em;
+  margin-bottom: 15em;
+  font-size: 0.625rem;
+  text-transform: none;
+}
+
+.greeting-text {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+.time {
+  font-size: 6.25rem;
+}
+
+.time span {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.time-zone {
+  margin: 1em 0 3em 0;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.info-text {
+  font-weight: 400;
+  font-size: 0.625rem;
+  line-height: 5em;
+  letter-spacing: 1px;
+}
+
+.info-text-bold {
+  margin-top: .5em;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+}
+
+/* =================
+     Tablet Style
+   ================= */
+@media all and (min-width: 31.25em) {
+  .quote-text {
+    padding-right: 4em;
+  }
+  .info-text {
+    font-size: 0.75rem;
+  }
+  .info-text-bold {
+    font-size: 1.85rem;
+  }
+}
+
+/* =================
+     Desktop Style
+   ================= */
+@media all and (min-width: 56.25em) {
+  .quote-text, .quote-author {
+    font-size: 1rem;
+  }
+  .quote-text {
+    padding-right: 0;
+  }
+  .greeting-text {
+    font-size: 1rem;
+  }
+  .time {
+    font-size: 10rem;
+  }
+  .time-zone {
+    margin: auto;
+    font-size: 1.25rem;
+  }
+  .info-text {
+    line-height: unset;
+  }
+  .info-text-bold {
+    font-size: 2.5rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,177 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: $color-white;
+    text-transform: uppercase;
+}
+
+.background {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.4 );
+    }
+}
+
+.day-bg {
+    background-image: url('../assets/mobile/bg-image-daytime.jpg');
+}
+
+.night-bg {
+    background-image: url(../assets/mobile/bg-image-nighttime.jpg);
+}
+
+.container {
+    margin: 1em 0 0 1.5em;
+}
+
+.quote {
+    display: flex;
+    justify-content: space-between;
+}
+
+.refresh-icon {
+    cursor: pointer;
+    align-self: center;
+    margin: 0 1.5em 1em 0;
+}
+
+.display-time {
+    margin-top: 2em;
+}
+
+.greeting {
+    display: flex;
+}
+
+.icons {
+    align-self: center;
+    margin-right: 1em;
+}
+
+.info-detail-container {
+    width: 100%;
+    padding: 3em 1.625em;
+    position: absolute;
+    bottom: -1em;
+    background-color: $color-light-grey;
+    color: $color-black;
+    transition: all 0.5s ease;
+}
+
+.hide-detail {
+   display: none;
+}
+
+.info-position {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* =================
+     Tablet Style
+   ================= */
+@media all and (min-width: 31.25em) {
+    .day-bg {
+        background-image: url('../assets/tablet/bg-image-daytime.jpg');
+    }
+    
+    .night-bg {
+        background-image: url('../assets/tablet/bg-image-nighttime.jpg');
+    }
+
+    .container {
+        margin: 2em 0 0 2.5em;
+    }
+
+    .refresh-icon {
+        margin: 0 3.5em 1em 0;
+    }
+
+    .info-detail-container {
+       height: 50%;
+       position: fixed;
+    }
+
+}
+
+/* =================
+     Desktop Style
+   ================= */
+@media all and (min-width: 56.25em) {
+    .day-bg {
+        background-image: url('../assets/desktop/bg-image-daytime.jpg');
+    }
+    
+    .night-bg {
+        background-image: url('../assets/desktop/bg-image-nighttime.jpg');
+    }
+
+    .container {
+        margin-left: 6em;
+    }
+
+    .quote {
+        width: 60%;
+    }
+
+    .refresh-icon {
+        margin-bottom: 1.8em;
+    }
+
+    .info-position {
+        display: unset;
+        margin-bottom: 2em;
+    }
+
+    .info-detail-pos-desk {
+        margin: 0 6em;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+   .desktop-pos-one {
+       display: flex;
+       flex-direction: column;
+   }
+
+   .desktop-pos-two {
+       display: flex;
+       flex-direction: column;
+       margin-left: 6em;
+ }
+}
+
+@media all and (min-width: 96em) {
+    .container {
+        margin-left: 10em;
+    }
+
+    .info-detail-pos-desk {
+        margin: 0 10em;
+    }
+}
+
+

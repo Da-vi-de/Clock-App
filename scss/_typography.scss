@@ -1,0 +1,98 @@
+.quote-text {
+    margin-top: 1em;
+    font-size: $font-size-sm;
+    line-height: 1.80em;
+    text-transform: none;
+}
+
+.quote-author {
+    margin-top: 1em;
+    margin-bottom: 15em;
+    font-size: $font-size-sm;
+    text-transform: none;
+}
+
+.greeting-text {
+    font-size: $font-size-sm-md;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.time {
+    font-size: $font-size-xl;
+    
+    span {
+        font-size: $font-size-sm-md;
+        font-weight: 400; 
+    }
+}
+
+.time-zone {
+    margin: 1em 0 3em 0;
+    font-size: $font-size-sm-md;
+    letter-spacing: 1px;
+}
+
+.info-text {
+    font-weight: 400;
+    font-size: $font-size-sm;
+    line-height: 5em;
+    letter-spacing: 1px;
+}
+
+.info-text-bold {
+   margin-top: .5em; 
+   font-size:  $font-size-md;
+   text-transform: capitalize;
+}
+
+/* =================
+     Tablet Style
+   ================= */
+@media all and (min-width: 31.25em) {
+    .quote-text {
+        padding-right: 4em;
+    }
+
+    .info-text {
+        font-size: $font-size-sm-md;
+    }
+
+    .info-text-bold {
+        font-size: $font-size-l-md;
+    }
+}
+
+/* =================
+     Desktop Style
+   ================= */
+@media all and (min-width: 56.25em) {
+    .quote-text, .quote-author {
+        font-size: $font-size-sm-l;
+    }
+
+   .quote-text {
+       padding-right: 0;
+   }
+
+   .greeting-text {
+       font-size: $font-size-sm-l;
+   }
+
+   .time {
+    font-size: $font-size-xxl;
+  }
+
+  .time-zone {
+      margin: auto;
+      font-size: $font-size-md;
+  }
+
+  .info-text {
+      line-height: unset;
+  }
+
+  .info-text-bold {
+      font-size: $font-size-l;
+  }
+}
