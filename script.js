@@ -16,7 +16,7 @@ function getTime() {
 
    if(hours >= 5 && hours <= 11) {
      greeting = 'morning';
-  } else if(hours >= 12 && hours <= 18) {
+  } else if(hours >= 12 && hours <= 17) {
      greeting = 'afternoon';
   } else {
      greeting = 'evening';
@@ -24,7 +24,7 @@ function getTime() {
   $('#greeting').text(`good ${greeting}, it's currently`);
 
    //Change background and icon
-   if(hours >= 6  && hours <= 18) {
+   if(hours >= 6  && hours <= 17) {
    $('div.background').addClass('day-bg');
    } else {
       $('div.background').removeClass('day-bg');
@@ -45,8 +45,6 @@ function getTime() {
    setTimeout(getTime,interval);
 };
 
-
-
 // Get the location through Geolocation API
 function getLocation() {
 
@@ -54,6 +52,8 @@ function getLocation() {
    
    $.getJSON("https://freegeoip.app/json/", function(data) {
       location.text(data.country_name);
+   }).fail(function() { 
+      alert( "error" )
    });
 };
 
@@ -71,6 +71,8 @@ function getTimezoneAndInfo() {
       dayOfYear.text(data.day_of_year);
       dayOfWeek.text(data.day_of_week);
       numberOfWeek.text(data.week_number);
+   }).fail(function() { 
+      alert( "error" )
    });
 };
 
@@ -85,6 +87,8 @@ refresh.on('click', function(e) {
 
       quote.text(`"${data.content}"`).find('p');
       author.text(data.author);
+   }).fail(function() { 
+      alert( "error" )
    });
 });
 
@@ -108,21 +112,4 @@ refresh.on('click', function(e) {
    getTime();
    getTimezoneAndInfo();
    getLocation();
-
-   //Update time
-	let interval = (60 - (new Date()).getSeconds()) * 1000 + 5;
-   setTimeout(getTime,interval);
 });
-
-
-/*
-if(hours >= 5 && hours <= 17) {
-      $('#bg').toggleClass('.day-bg');
-   } else {
-     $('#bg').toggleClass('.night-bg');
-     icon.attr("src", "./assets/desktop/icon-moon.svg");
-     icon.attr("alt", "moon icon");
-     extraInfo.css("background-color", "#303030");
-     extraInfo.css("color", "#ffff");
-   };  
-*/
