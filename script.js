@@ -65,7 +65,7 @@ function getTimezoneAndInfo() {
    const dayOfWeek = $('#weekDay');
    const numberOfWeek = $('#weekNumber');
 
-   $.getJSON("http://worldtimeapi.org/api/ip", function(data) {
+   $.getJSON("https://worldtimeapi.org/api/ip", function(data) {
 
       timeZone.text(data.timezone);
       dayOfYear.text(data.day_of_year);
