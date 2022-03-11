@@ -44,7 +44,7 @@ body {
 }
 
 .container {
-  margin: 1em 0 0 1.5em;
+  margin: 1rem 0 0 1.5rem;
 }
 
 .quote {
@@ -61,11 +61,17 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin: 0 1.5em 1em 0;
+  margin: 0 1.5rem 1rem 0;
+  padding: .2rem;
+  outline: none;
+}
+
+.refresh-icon:focus-visible {
+  border: 3px dotted #303030;
 }
 
 .display-time {
-  margin-top: 2em;
+  margin-top: 2rem;
 }
 
 .greeting {
@@ -78,14 +84,14 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin-right: 1em;
+  margin-right: 1rem;
 }
 
 .info-detail-container {
   width: 100%;
-  padding: 3em 1.625em;
+  padding: 3rem 1.625rem;
   position: absolute;
-  bottom: -1em;
+  bottom: -1rem;
   background-color: #ffffffbf;
   color: #303030;
   -webkit-transition: all 0.5s ease;
@@ -108,7 +114,7 @@ body {
 /* =================
      Tablet Style
    ================= */
-@media all and (min-width: 31.25em) {
+@media all and (min-width: 31.25rem) {
   .day-bg {
     background-image: url("../assets/tablet/bg-image-daytime.jpg");
   }
@@ -116,10 +122,10 @@ body {
     background-image: url("../assets/tablet/bg-image-nighttime.jpg");
   }
   .container {
-    margin: 2em 0 0 2.5em;
+    margin: 2rem 0 0 2.5rem;
   }
   .refresh-icon {
-    margin: 0 3.5em 1em 0;
+    margin: 0 3.5rem 1rem 0;
   }
   .info-detail-container {
     height: 50%;
@@ -130,7 +136,7 @@ body {
 /* =================
      Desktop Style
    ================= */
-@media all and (min-width: 56.25em) {
+@media all and (min-width: 56.25rem) {
   .day-bg {
     background-image: url("../assets/desktop/bg-image-daytime.jpg");
   }
@@ -138,20 +144,20 @@ body {
     background-image: url("../assets/desktop/bg-image-nighttime.jpg");
   }
   .container {
-    margin-left: 6em;
+    margin-left: 6rem;
   }
   .quote {
     width: 60%;
   }
   .refresh-icon {
-    margin-bottom: 1.8em;
+    margin-bottom: 1.8rem;
   }
   .info-position {
     display: unset;
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
   }
   .info-detail-pos-desk {
-    margin: 0 6em;
+    margin: 0 6rem;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
@@ -174,25 +180,28 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-left: 6em;
+    margin-left: 6rem;
   }
 }
 
-@media all and (min-width: 96em) {
+@media all and (min-width: 96rem) {
   .container {
-    margin-left: 10em;
+    margin-left: 10rem;
+  }
+  .refresh-icon {
+    margin: 1rem 4rem 1.8rem 0;
   }
   .info-detail-pos-desk {
-    margin: 0 10em;
+    margin: 0 10rem;
   }
 }
 
 .drop-down-info {
-  width: 10em;
-  height: 3.5em;
-  margin-bottom: 2em;
-  padding: 0 0.5em 0 1.5em;
-  border-radius: 2.125em;
+  width: 10rem;
+  height: 3.5rem;
+  margin-bottom: 2rem;
+  padding: 0 0.5rem 0 1.5rem;
+  border-radius: 2.125rem;
   color: #8f8c8c;
   text-transform: uppercase;
   font-weight: 700;
@@ -208,13 +217,18 @@ body {
       align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  outline: none;
   -webkit-box-align: center;
   -webkit-box-pack: justify;
 }
 
+.drop-down-info:focus-visible {
+  border: 4px dotted #4191ec;
+}
+
 .arrow-icon {
-  width: 2.5em;
-  height: 2.5em;
+  width: 2.5rem;
+  height: 2.5rem;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   transition: transform 0.5s, filter 0.2s, -webkit-transform 0.5s, -webkit-filter 0.2s;
@@ -228,13 +242,13 @@ body {
 /* =================
      Desktop Style
    ================= */
-@media all and (min-width: 56.25em) {
+@media all and (min-width: 56.25rem) {
   .drop-down-info {
     -ms-flex-item-align: end;
         align-self: flex-end;
     margin-left: auto;
-    margin-right: 2em;
-    margin-bottom: 2em;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
   }
 }
 

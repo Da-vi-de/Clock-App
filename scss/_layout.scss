@@ -44,7 +44,7 @@ body {
 }
 
 .container {
-    margin: 1em 0 0 1.5em;
+    margin: 1rem 0 0 1.5rem;
 }
 
 .quote {
@@ -55,11 +55,17 @@ body {
 .refresh-icon {
     cursor: pointer;
     align-self: center;
-    margin: 0 1.5em 1em 0;
+    margin: 0 1.5rem 1rem 0;
+    padding: .2rem;
+    outline: none;
+
+    &:focus-visible {
+        border: 3px dotted $color-black;
+    }
 }
 
 .display-time {
-    margin-top: 2em;
+    margin-top: 2rem;
 }
 
 .greeting {
@@ -68,14 +74,14 @@ body {
 
 .icons {
     align-self: center;
-    margin-right: 1em;
+    margin-right: 1rem;
 }
 
 .info-detail-container {
     width: 100%;
-    padding: 3em 1.625em;
+    padding: 3rem 1.625rem;
     position: absolute;
-    bottom: -1em;
+    bottom: -1rem;
     background-color: $color-light-grey;
     color: $color-black;
     transition: all 0.5s ease;
@@ -93,7 +99,7 @@ body {
 /* =================
      Tablet Style
    ================= */
-@media all and (min-width: 31.25em) {
+@media all and (min-width: 31.25rem) {
     .day-bg {
         background-image: url('../assets/tablet/bg-image-daytime.jpg');
     }
@@ -103,11 +109,11 @@ body {
     }
 
     .container {
-        margin: 2em 0 0 2.5em;
+        margin: 2rem 0 0 2.5rem;
     }
 
     .refresh-icon {
-        margin: 0 3.5em 1em 0;
+        margin: 0 3.5rem 1rem 0;
     }
 
     .info-detail-container {
@@ -120,7 +126,7 @@ body {
 /* =================
      Desktop Style
    ================= */
-@media all and (min-width: 56.25em) {
+@media all and (min-width: 56.25rem) {
     .day-bg {
         background-image: url('../assets/desktop/bg-image-daytime.jpg');
     }
@@ -130,7 +136,7 @@ body {
     }
 
     .container {
-        margin-left: 6em;
+        margin-left: 6rem;
     }
 
     .quote {
@@ -138,16 +144,16 @@ body {
     }
 
     .refresh-icon {
-        margin-bottom: 1.8em;
+        margin-bottom: 1.8rem;
     }
 
     .info-position {
         display: unset;
-        margin-bottom: 2em;
+        margin-bottom: 2rem;
     }
 
     .info-detail-pos-desk {
-        margin: 0 6em;
+        margin: 0 6rem;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
@@ -160,17 +166,21 @@ body {
    .desktop-pos-two {
        display: flex;
        flex-direction: column;
-       margin-left: 6em;
+       margin-left: 6rem;
  }
 }
 
-@media all and (min-width: 96em) {
+@media all and (min-width: 96rem) {
     .container {
-        margin-left: 10em;
+        margin-left: 10rem;
+    }
+
+    .refresh-icon {
+        margin: 1rem 4rem 1.8rem 0;
     }
 
     .info-detail-pos-desk {
-        margin: 0 10em;
+        margin: 0 10rem;
     }
 }
 

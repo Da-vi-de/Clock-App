@@ -15,7 +15,7 @@
 
   <div class="background" id="bg"></div>
 
-<main class="container">
+<div class="container">
   
  <header class="hero">
   <div class="quote">
@@ -31,10 +31,11 @@
          tabindex="1"
     >
   </div>
-  <h3 class="quote-author" id="author">Ada Lovelace</h3>
+  <h1 class="quote-author" id="author">Ada Lovelace</h1>
 </header>
 
   <!-- Display Time-->
+
 <div class="display-time">
 
   <div class="greeting">
@@ -46,47 +47,54 @@
     <h2 class="greeting-text" id="greeting"></h2>
   </div>
 
-  <h1 class="time" id="time">11:37</h1>
-  <h2 class="time-zone" id="location"></h2>
+  <h2 class="time" id="time">11:37</h2>
+  <p class="time-zone" id="location"></p>
 </div>
 
+<div class="drop-down-btn-container">
   <button id="myButton" class="drop-down-info">
    <span>More</span>
     <img src="./assets/desktop/icon-arrow-up.svg" alt="arrow icon" 
          class="arrow-icon" 
          id="arrow">
   </button>
-</main>
-  <!-- Info Detail -->
-  <div class="info-detail-container hide-detail" id="extraInfo">
-
-  <div class="info-detail-pos-desk">
-
-    <div class="desktop-pos-one">
-    <article class="info-position">
-        <h3 class="info-text">Current timezone</h3>
-        <h3 class="info-text-bold" id="timeZone">europe/london</h3>
-    </article>
-  
-    <article class="info-position">
-      <h3 class="info-text">Day of the year</h3>
-      <h3 class="info-text-bold" id="yearDay">295</h3>
-    </article>
-  </div>
-
-  <div class="desktop-pos-two">
-    <article class="info-position">
-      <h3 class="info-text">Day of the week</h3>
-      <h3 class="info-text-bold" id="weekDay">5</h3>
-    </article>
-
-      <article class="info-position">
-        <h3 class="info-text">Week number</h3>
-        <h3 class="info-text-bold" id="weekNumber">42</h3>
-      </article>
-    </div>
-  </div>
 </div>
+</div>
+
+  <!-- Info Detail -->
+
+  <section>
+
+    <div class="info-detail-container hide-detail" id="extraInfo">
+
+      <div class="info-detail-pos-desk">
+
+        <div class="desktop-pos-one">
+        <div class="info-position">
+            <h3 class="info-text">Current timezone</h3>
+            <h3 class="info-text-bold" id="timeZone">europe/london</h3>
+        </div>
+      
+        <div class="info-position">
+          <h3 class="info-text">Day of the year</h3>
+          <h3 class="info-text-bold" id="yearDay">295</h3>
+        </div>
+      </div>
+
+      <div class="desktop-pos-two">
+        <div class="info-position">
+          <h3 class="info-text">Day of the week</h3>
+          <h3 class="info-text-bold" id="weekDay">5</h3>
+        </div>
+
+          <div class="info-position">
+            <h3 class="info-text">Week number</h3>
+            <h3 class="info-text-bold" id="weekNumber">42</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
           integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
